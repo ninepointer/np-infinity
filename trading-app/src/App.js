@@ -302,14 +302,14 @@ export default function App() {
           pathname == "/resetpassword" ?
           <Route path="/resetpassword" element={<ResetPassword/>} />
           :
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<SignIn />} />
           :
           pathname == "/" || !pathname ?
           <Route path="/" element={<Navigate 
             to={getDetails?.userDetails.role?.roleName === adminRole ? "/infinitydashboard" : getDetails.userDetails?.designation == 'Equity Trader' ? '/infinitytrading':'/stoxherodashboard'} 
             />} />
             :
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<SignIn />} />
           // <Route path="/" element={<Navigate to={pathname} />} />
           // <Route path="/" element={<Navigate to="/virtualtrading" />} />
           
@@ -322,7 +322,7 @@ export default function App() {
           <Route path='/terms' element={<Terms/>}/>
           <Route path='/jobdescription' element={<JobDescription/>}/>
           <Route path='/apply' element={<JobApply/>}/>
-          <Route path='/home' element={<Home/>}/>
+          <Route path='/home' element={<SignIn/>}/>
           <Route path='/login' element={<SignIn />}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
